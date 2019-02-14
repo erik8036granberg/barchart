@@ -1,0 +1,33 @@
+/* basic styles */
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#container {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: aquamarine;
+}
+
+#box {
+  height: 100%;
+  background-color: orange;
+  border: 2px solid black;
+  z-index: 40;
+  width: calc(100% / 40);
+}
