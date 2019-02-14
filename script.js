@@ -8,7 +8,6 @@ window.addEventListener("DOMContentLoaded", init);
 
 function init() {
   console.log("init");
-
   createBoxes();
 }
 
@@ -61,7 +60,7 @@ function createBoxes() {
     document.querySelector("#box").remove();
   }
 
-  // delay
+  // delay after filleing the screen
   if (number <= 39) {
     createBoxes();
   } else {

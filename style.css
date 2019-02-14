@@ -33,16 +33,6 @@ body {
   background-color: rgb(255, 255, 255) !important;
 }
 
-#box::before {
-  position: absolute;
-  height: 5vw;
-  width: 10vw;
-  top: 10px;
-  left: 10px;
-  z-index: 50;
-  background-color: rgb(255, 255, 255);
-}
-
 @keyframes move {
   0% {
     transform: translate(0);
