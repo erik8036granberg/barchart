@@ -22,7 +22,6 @@ function createBoxes() {
   // clone box
   const clone = document.querySelector("#boxtemplate").content.cloneNode(true);
   const box = clone.querySelector("#box");
-  const cloneBox = document.querySelector("#container").append(clone);
 
   // random number
   let randomNumber = getRandomInt(0, 35);
@@ -47,6 +46,12 @@ function createBoxes() {
     box.style.backgroundColor = "Green";
   }
 
+  box.addEventListener("click", () =>
+    alert("Number of guests: " + randomNumber)
+  );
+
+  const cloneBox = document.querySelector("#container").append(clone);
+
   // counter
   number++;
 
@@ -54,11 +59,15 @@ function createBoxes() {
   if (counter.length > max_length) {
     //Remove the first one
     document.querySelector("#box").remove();
-    counter.shift(number);
   }
 
-  // timer function
-  setTimeout(createBoxes, 1000);
+  // delay
+  if (number <= 39) {
+    createBoxes();
+  } else {
+    // timer function
+    setTimeout(createBoxes, 1000);
+  }
 }
 //Random function - The maximum is exclusive and the minimum is inclusive
 function getRandomInt(min, max) {

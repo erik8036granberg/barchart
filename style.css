@@ -11,24 +11,36 @@ img {
 body {
   margin: 0;
   padding: 0;
-  position: relative;
 }
 
 #container {
-  width: 100%;
-  height: 35vh;
+  width: 100vw;
+  height: 40vh;
+  background-color: rgb(183, 217, 255);
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
-  background-color: rgb(183, 217, 255);
 }
 
 #box {
   height: 100%;
   z-index: 40;
   width: calc(100% / 40);
-  /* animation: move 40s infinite; */
+}
+
+#box:hover {
+  background-color: rgb(255, 255, 255) !important;
+}
+
+#box::before {
+  position: absolute;
+  height: 5vw;
+  width: 10vw;
+  top: 10px;
+  left: 10px;
+  z-index: 50;
+  background-color: rgb(255, 255, 255);
 }
 
 @keyframes move {
